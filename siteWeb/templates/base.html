@@ -37,22 +37,32 @@
           <!-- Top Content -->
           <div class="col-6 col-md-9 col-lg-8">
             <div class="top-header-content">
-              <a href="#" data-toggle="tooltip" data-placement="bottom" title="28 Jackson Street, Chicago, 7788569 USA">
-                <i class="fa fa-map-marker"></i> <span>28 Jackson Street, Chicago, 7788569 USA</span>
+              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Dakar, Pikine, Senegal">
+                <i class="fa fa-map-marker"></i> <span>Dakar, Pikine,  Senegal</span>
               </a>
               <a href="#" data-toggle="tooltip" data-placement="bottom" title="info.dento@gmail.com">
-                <i class="fa fa-envelope"></i> <span>info.dento@gmail.com</span>
+                <i class="fa fa-envelope"></i> <span>alphaibrahimas95@gmail.com</span>
               </a>
             </div>
           </div>
           <!-- Top Header Social Info -->
           <div class="col-6 col-md-3 col-lg-4">
             <div class="top-header-social-info text-right">
-              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
-              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
-              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i class="fa fa-google-plus"></i></a>
-              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Linkedin"><i class="fa fa-linkedin"></i></a>
-              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest"></i></a>
+              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google Plus">
+                <i class="fa fa-google-plus"></i>
+              </a>
+              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Linkedin">
+                <i class="fa fa-linkedin"></i>
+              </a>
+              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest">
+                <i class="fa fa-pinterest"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -90,50 +100,24 @@
               <!-- Nav Start -->
               <div class="classynav">
                 <ul id="nav">
-                  <li><a href="{% url 'home' %}">Home</a></li>
-                  <li><a href="#">Pages</a>
-                    <ul class="dropdown">
-                      <li><a href="{% url 'home' %}">- Home</a></li>
-                      <li><a href="about.html">- About Us</a></li>
-                      <li><a href="service.html">- Service</a></li>
-                      <li><a href="pricing.html">- Pricing</a></li>
-                      <li><a href="blog.html">- Blog</a></li>
-                      <li><a href="blog-details.html">- Blog Details</a></li>
-                      <li><a href="contact.html">- Contact</a></li>
-                      <li><a href="#">- Dropdown</a>
-                        <ul class="dropdown">
-                          <li><a href="#">- Dropdown Item</a></li>
-                          <li><a href="#">- Dropdown Item</a>
-                            <ul class="dropdown">
-                              <li><a href="#">- Even Dropdown</a></li>
-                              <li><a href="#">- Even Dropdown</a></li>
-                              <li><a href="#">- Even Dropdown</a></li>
-                              <li><a href="#">- Even Dropdown</a></li>
-                            </ul>
-                          </li>
-                          <li><a href="#">- Dropdown Item</a></li>
-                          <li><a href="#">- Dropdown Item</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li><a href="about.html">About</a></li>
+                  <li><a href="{% url 'home' %}">Accueil</a></li>
+                  <li><a href="about.html">Apropos</a></li>
                   <li><a href="service.html">Service</a></li>
-                  <li><a href="pricing.html">Pricing</a></li>
+                  <li><a href="pricing.html">Prix</a></li>
                   <li><a href="#">Blog</a>
                     <ul class="dropdown">
-                      <li><a href="blog.html">- Blog</a></li>
-                      <li><a href="blog-details.html">- Blog Details</a></li>
+                      <li><a href="{% url 'blog'%}">- Blog</a></li>
+                      <li><a href="{% url 'blog'%}">- Blog Details</a></li>
                     </ul>
                   </li>
-                  <li><a href="./contact.html">Contact</a></li>
+                  <li><a href="{% url 'contact' %}">Contact</a></li>
                 </ul>
               </div>
               <!-- Nav End -->
             </div>
 
             <!-- Booking Now Button -->
-            <a href="#booking" class="btn dento-btn booking-btn">Réserver maintenant</a>
+            <a href="{% url 'home' %}#rende-vous" class="btn dento-btn booking-btn">Réserver maintenant</a>
           </nav>
         </div>
       </div>
@@ -158,11 +142,20 @@
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="single-footer-widget">
             <a href="./index.html" class="d-block mb-4"><img src="{% static 'website/img/core-img/logo.png' %}" alt=""></a>
-            <p>Etiam sutor risus, dapibus act elefend katen, lacinia sitamet denim. Mauris sagittis kansa interdum dignissim.</p>
+            <p> Ibans est un clinique dentaire, qui est là pour vous aider à avoir des dents Extra-ordinaire et dans le temps.</p>
             <div class="footer-contact">
-              <p><i class="icon_pin"></i> 28 Jackson Street, Chicago, 7788569 USA</p>
-              <p><i class="icon_phone"></i> +84. 2252. 2250. 122</p>
-              <p><i class="icon_mail"></i> info.dento@gmail.com</p>
+              <p>
+              <i class="icon_mail"></i> 
+                Alphaibrahimas95@gmail.com
+              </p>
+              <p>
+              <i class="icon_pin"></i> 
+                Dakar, Pikine,  Senegal
+              </p>
+              <p>
+              <i class="icon_phone"></i>
+                77 273 33 55
+              </p>
             </div>
           </div>
         </div>
@@ -171,15 +164,15 @@
         <div class="col-12 col-sm-6 col-lg">
           <div class="single-footer-widget">
             <!-- Widget Title -->
-            <h5 class="widget-title">Opening Hours</h5>
+            <h5 class="widget-title">Horaires</h5>
 
             <!-- Opening Hours -->
             <ul class="opening-hours">
-              <li><span>Mon-Wed</span> <span>8.00-18.00</span></li>
-              <li><span>Thu-Fri</span> <span>8.00-17.00</span></li>
-              <li><span>Sat</span> <span>9.00-17.00</span></li>
-              <li><span>Sun</span> <span>10.00-17.00</span></li>
-              <li><span>Holiday</span> <span>Closed</span></li>
+              <li><span>Lun-Mer</span> <span>8.00-18.00</span></li>
+              <li><span>MAr-Ven</span> <span>8.00-17.00</span></li>
+              <li><span>Sam</span> <span>9.00-17.00</span></li>
+              <li><span>Dimanche</span> <span>10.00-17.00</span></li>
+              <li><span>Vacances</span> <span>Fermé</span></li>
             </ul>
           </div>
         </div>
@@ -188,7 +181,7 @@
         <div class="col-12 col-sm-6 col-lg">
           <div class="single-footer-widget">
             <!-- Widget Title -->
-            <h5 class="widget-title">Quick Link</h5>
+            <h5 class="widget-title">Liens Importants</h5>
 
             <!-- Quick Links Nav -->
             <nav>
@@ -214,7 +207,9 @@
             <!-- Widget Title -->
             <h5 class="widget-title">Newsletter</h5>
 
-            <p>We will send out weekly newest article and some great offers</p>
+            <p>
+              Nous allons vous envoyé des mails d'information hebdomadaire.
+            </p>
             <!-- Newsletter Form -->
             <div class="footer-newsletter-form">
               <form action="#" method="post">
@@ -242,7 +237,7 @@
         <div class="col-12">
           <div class="copywrite-content">
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib --- Downloaded from <a href="https://themeslab.org/" target="_blank">Themeslab</a></a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.facebook.com/Invictus.Consulting" target="_blank">Invictus Digital</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>

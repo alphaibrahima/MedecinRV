@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  Dr. Alpha Ibrahima Sow
+{% endblock  %}
+
+{% block cotent %}
+    <!-- ***** Debut de la zone de fil d'Ariane ***** -->
+    <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static 'website/img/bg-img/12.jpg' %});">
+        <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+            <h2 class="title">Rendez-vous</h2>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="breadcumb--con">
+        <div class="container">
+        <div class="row">
+            <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                </ol>
+            </nav>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- ***** Fin de la zone de fil d'Ariane ***** -->
+
+ 
+    <div style=" margin: 0 auto; width: 500px;">
+        <strong>Nom :</strong> {{ your_name }}<br>   
+        <strong>Phone : </strong> {{ your_phone }}<br>  
+        <strong>Email : </strong> {{ your_email }}<br>  
+        <strong>Adresse : </strong> {{ your_address }}<br>
+        <strong>Horaire :</strong> {{ votre_horaire }}<br>
+        <strong>Jours : </strong> {{ votre_jour }}<br>  
+        <strong>Message :</strong> {{ your_message }}<br>
+    </div>
+    <br><br><br><br><br>
+{% endblock  %} 

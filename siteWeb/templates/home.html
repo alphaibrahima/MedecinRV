@@ -230,13 +230,6 @@
           <div class="dento-video-area mb-100">
             <iframe width="560" height="400" src="https://www.youtube.com/embed/sy5XMOOWAC0" title="YouTube video player" 
             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <!-- Play Button -->
-            {% comment %} 
-              <a href="https://www.youtube.com/watch?v=sy5XMOOWAC0&ab_channel=Cl%C3%ADnicaM%C3%A9dicoDentalPardi%C3%B1as" class="video-play-button">
-                <i class="fa fa-play" aria-hidden="true">
-                </i>
-              </a> 
-            {% endcomment %}
           </div>
         </div>
       </div>
@@ -351,54 +344,56 @@
       <div class="row">
         <div class="col-12">
           <!-- Appointment Form -->
-          <div class="appointment-form">
-            <form action="#" method="post">
+          <div class="appointment-form" id="rende-vous">
+            <form action="{% url 'rendez-vous'%}" method="post">
+            {% csrf_token %}
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group mb-30">
-                    <input type="text" name="your-name" class="form-control" placeholder="Your Name" required>
+                    <input type="text" name="your-name" class="form-control" placeholder="Nom" required>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group mb-30">
-                    <input type="text" name="your-phone" class="form-control" placeholder="Your Phone" required>
+                    <input type="text" name="your-phone" class="form-control" placeholder="Numero" required>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group mb-30">
-                    <input type="email" name="your-email" class="form-control" placeholder="Your Email" required>
+                    <input type="email" name="your-email" class="form-control" placeholder="Email" required>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group mb-30">
-                    <input type="text" name="your-address" class="form-control" placeholder="Your Address">
+                    <input type="text" name="your-address" class="form-control" placeholder="Votre Addresse">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group mb-30">
-                    <select name="your-scheldule" class="form-control">
-                      <option value="Choose Your Scheldule">Choissisez Votre Horaire</option>
-                      <option value="9 AM to 10 AM">9 AM to 10 AM</option>
-                      <option value="11 AM to 12 PM">11 AM to 12 PM</option>
-                      <option value="2 PM to 4 PM">2 PM to 4 PM</option>
-                      <option value="8 PM to 10 PM">8 PM to 10 PM</option>
+                    <select name="votre-horaire" class="form-control">
+                      <option value="Choissisez Votre Horaire">Choissisez Votre Horaire</option>
+                      <option value="9 AM -- 10 AM">9 AM -- 10 AM</option>
+                      <option value="11 AM -- 12 PM">11 AM -- 12 PM</option>
+                      <option value="2 PM -- 4 PM">2 PM -- 4 PM</option>
+                      <option value="8 PM -- 10 PM">8 PM -- 10 PM</option>
                     </select>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group mb-30">
-                    <select name="your-time" class="form-control">
-                      <option value="Choose Your Time">Choissisez Votre Horaire</option>
-                      <option value="9 AM to 10 AM">9 AM to 10 AM</option>
-                      <option value="11 AM to 12 PM">11 AM to 12 PM</option>
-                      <option value="2 PM to 4 PM">2 PM to 4 PM</option>
-                      <option value="8 PM to 10 PM">8 PM to 10 PM</option>
+                    <select name="votre-jour" class="form-control">
+                      <option value="Choissisez Votre Jour">Choissisez Votre Jour</option>
+                      <option value="Lundi">Lundi</option>
+                      <option value="Mardi">Mardi</option>
+                      <option value="Mercredi">Mercredi</option>
+                      <option value="Jeudi">Jeudi</option>
+                      <option value="Vendredi">Vendredi</option>
                     </select>
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="form-group mb-30">
-                    <textarea name="your-message" class="form-control" placeholder="Your Message"></textarea>
+                    <textarea name="your-message" class="form-control" placeholder="Votre Message"></textarea>
                   </div>
                 </div>
                 <div class="col-12 text-center">
