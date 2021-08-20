@@ -1,8 +1,10 @@
 
-
-
 import os
 from pathlib import Path
+# 3 Lignes ajoute pour le deploiment sur heroku
+import django_heroku
+import dj_database_url
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,6 +42,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Ligne ajoute pour le deploiment sur heroku
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'MedecinRV.urls'
@@ -113,8 +117,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR / "static"),
-    
 ]
+
+# Ligne ajoute pour le deploiment sur heroku
+STATICFILES_STORAGE ='whitenoise.storage.CompresseManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -132,4 +138,7 @@ EMAIL_HOST_USER = 'alphaibrahimas95@gmail.com'
 EMAIL_HOST_PASSWORD = 'alphasow1995##'
 EMAIL_USE_TSL = True
 # EMAIL_USE_SSL = False
+
+# Ligne ajoute pour le deploiment sur heroku
+django_heroku.settings(locals())
 
